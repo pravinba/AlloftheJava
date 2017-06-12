@@ -1,0 +1,3 @@
+org\zorro\jaxrs\service\CountryService.class
+org\zorro\jaxrs\bean\Country.class
+org\zorro\jaxrs\controller\CountryController.class
