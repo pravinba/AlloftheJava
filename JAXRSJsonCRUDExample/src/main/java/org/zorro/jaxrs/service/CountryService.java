@@ -46,6 +46,27 @@ public class CountryService {
   Country country= countryIdMap.get(id);
   return country;
  }
+ 
+ public Country getCountry(int id, String countryName) {
+	 
+	 System.out.println("Searching for id:"+id+" countryName:"+countryName);
+	    
+	 Country country = countryIdMap.get(id);
+	 if(country==null)
+	 {
+		 System.out.println("Completed Search");   
+		 return null;
+	 }
+	 
+	 System.out.println("The country of the respective Nation ID is" + country.getCountryName());
+	 if(country.getCountryName().equals(countryName))
+	 {
+		System.out.println("Found the searched country");
+		return country; 
+	 }
+	    
+	 return null;
+ }
  public Country addCountry(Country country)
  {
   country.setId(countryIdMap.size()+1);
